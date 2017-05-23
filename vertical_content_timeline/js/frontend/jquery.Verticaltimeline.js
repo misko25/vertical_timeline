@@ -3187,9 +3187,9 @@ Project demo: http://shindiristudio.com/timeline
 					dataDesc = $(this).attr('data-description'),
 					dataArray = dataId.split('/'),
 					d = parseInt(dataArray[0],10),
-					m = ($.inArray(dataArray[1],months) != -1) ? $.inArray(dataArray[1],months) : parseInt(dataArray[1],10),
+					m = ($.inArray(dataArray[1],months) != -1) ? $.inArray(dataArray[1],months) : parseInt(dataArray[1],10), /*months[parseInt(dataArray[1],10)];*/
 					y = parseInt(dataArray[2],10);
-				
+				console.log(m);
 					
 				
 				if(data.options.my_is_years){
@@ -3443,7 +3443,7 @@ Project demo: http://shindiristudio.com/timeline
 							
 							// Fill with nodes	
 							for (dy in yearsArr[yr][mnth]) {
-								html+= nodes[yearsArr[yr][mnth][dy]];
+								html+= nodes[yearsArr[yr][mnth][dy]]; //commented to remove nodes from left half of timeline
 								
 							}
 							html +=
@@ -3457,7 +3457,7 @@ Project demo: http://shindiristudio.com/timeline
 		
 							// Fill with nodes	
 							for (dy in yearsArr[yr][mnth]) {
-								html+= nodes[yearsArr[yr][mnth][dy]];
+								html+= nodes[yearsArr[yr][mnth][dy]]; //commented to remove nodes from right half of timeline
 								
 							}
 							html +=
